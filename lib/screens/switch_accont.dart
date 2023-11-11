@@ -75,36 +75,28 @@ class Screen_Switching extends StatelessWidget {
                           ),
                           SizedBox(height: 20),
                           Text('Milad Heydarloo',
-                              style: TextStyle(
-                                  fontSize: 16,
-                                  color: Colors.white,
-                                  fontWeight: FontWeight.bold)),
+                              //در داخل استایل متن به تکس تم اول برنامه مسیردهی میکنیم
+                              style: Theme.of(context).textTheme.headline1),
                           SizedBox(height: 20),
+                          //در اینجا ماجهت سایز دادن به دکمه از سایز باکس استفاده کردیم و در اول برنامه فقط استایل برای دکمه ساختیم تا همه دکمه های برنامه از یک استایل پیروی کنند
                           SizedBox(
                             height: 46,
                             width: 129,
                             child: ElevatedButton(
-                              style: ElevatedButton.styleFrom(
-                                primary: Color(0xffF35383),
-                                shape: RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.circular(15),
-                                ),
-                              ),
+                              style:
+                                  //در داخل استایل متن به تکس تم اول برنامه مسیردهی میکنیم
+                                  Theme.of(context).elevatedButtonTheme.style,
                               onPressed: () {},
                               child: Text(
                                 'Confirm',
-                                style: TextStyle(
-                                    fontSize: 16, fontWeight: FontWeight.bold),
+                                //چون داخل دکمه به تکس استایل دادیم در اینجا نیازی به مسیر دهی به استایل متن نیست
                               ),
                             ),
                           ),
                           SizedBox(height: 32),
                           Text(
                             'Switch Account',
-                            style: TextStyle(
-                                fontSize: 17,
-                                color: Colors.white,
-                                fontWeight: FontWeight.bold),
+                            style: Theme.of(context).textTheme.headline1,
                           )
                         ]),
                       ),
@@ -115,14 +107,23 @@ class Screen_Switching extends StatelessWidget {
             )),
             //اگر ویجت تکس رو توی یه پدینگ نزارم نمیتونم بهش فاصله بدم  از پایینوبالا
             Padding(
-              padding: EdgeInsets.only(top: 132, bottom: 63),
-              child: Text(
-                  style: TextStyle(
-                    fontSize: 20,
-                    color: Colors.white,
-                  ),
-                  'Don’t have an account? / Sign up'),
-            )
+                padding: EdgeInsets.only(top: 132, bottom: 63),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  mainAxisSize: MainAxisSize.max,
+                  children: [
+                    Text(
+                      'Don\’t have an account? /',
+                      //در داخل استایل متن به تکس تم اول برنامه مسیردهی میکنیم
+                      style: Theme.of(context).textTheme.headline1,
+                    ),
+                    Text(
+                      ' Sign up',
+                      //در داخل استایل متن به تکس تم اول برنامه مسیردهی میکنیم
+                      style: Theme.of(context).textTheme.headline1,
+                    )
+                  ],
+                ))
           ],
         ),
       ),

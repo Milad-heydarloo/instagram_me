@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:instagram/screens/switch_accont.dart';
 
 void main() {
   runApp(_Application());
@@ -11,8 +12,25 @@ class _Application extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      //در اینجا ما میخوایم تم و استایل کل اپ رو از صفحه اول اپ مدیریت کنیم
+      theme: ThemeData(
+          //برای اینکار از تم و تم دیتا استفاده میکنیم
+          textTheme: TextTheme(
+              //تکست تم برای استایل دهی به متن های برنامه است و تمام متن ها به اینجا متصل میشن جهت دریافت استایل
+              headline1: TextStyle(
+                  fontFamily: 'GB', fontSize: 16, color: Colors.white)),
+          //الویتت باتن جهت دادن استایل به تمام الویت باتن های برنامه
+          elevatedButtonTheme: ElevatedButtonThemeData(
+            style: ElevatedButton.styleFrom(
+                primary: Color(0xffF35383),
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(15),
+                ),
+                //در اینجا هم استایل مدیم به متن دکمه ای که داریم
+                textStyle: TextStyle(fontFamily: 'GB', fontSize: 12)),
+          )),
       debugShowCheckedModeBanner: false,
-      home: Splash(),
+      home: Screen_Switching(),
     );
   }
 }
