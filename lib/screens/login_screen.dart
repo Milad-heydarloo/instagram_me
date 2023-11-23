@@ -248,6 +248,9 @@ class _LoginState extends State<Login> {
     );
   }
 
+// زمانی که از ست استیت استفاده میکنیم باید اخرش حتما از دیسپز استفاده کنیم
+
+
   @override
   void dispose() {
     // TODO: implement dispose
