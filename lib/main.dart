@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:instagram/screens/login_screen.dart';
 import 'package:instagram/screens/switch_accont.dart';
 
 void main() {
@@ -18,7 +19,10 @@ class _Application extends StatelessWidget {
           textTheme: TextTheme(
               //تکست تم برای استایل دهی به متن های برنامه است و تمام متن ها به اینجا متصل میشن جهت دریافت استایل
               headline1: TextStyle(
-                  fontFamily: 'GB', fontSize: 16, color: Colors.white)),
+                  fontFamily: 'GB', fontSize: 16, color: Colors.white),
+              headline2: TextStyle(
+                  fontFamily: 'GB', fontSize: 20, color: Colors.white)),
+
           //الویتت باتن جهت دادن استایل به تمام الویت باتن های برنامه
           elevatedButtonTheme: ElevatedButtonThemeData(
             style: ElevatedButton.styleFrom(
@@ -30,7 +34,7 @@ class _Application extends StatelessWidget {
                 textStyle: TextStyle(fontFamily: 'GB', fontSize: 12)),
           )),
       debugShowCheckedModeBanner: false,
-      home: Screen_Switching(),
+      home: Login(),
     );
   }
 }
